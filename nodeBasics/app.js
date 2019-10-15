@@ -35,12 +35,15 @@ function doStuff(data) {
     })
 }
 
-doStuff(false).then(
+doStuff(true).then(
     () => {
         console.log("it was a success!!!!");
-    },
-    () => {
-        console.log("the data type was not a boolean and was not true and there for the failure message is being printed as a callback from the reject method passed in by the creation of the new promise.")
     }
-)
+    // },
+    // () => {
+    //     console.log("the data type was not a boolean and was not true and there for the failure message is being printed as a callback from the reject method passed in by the creation of the new promise.")
+    // }
+).catch((err) => {
+    console.log("this is an error")
+})
 
